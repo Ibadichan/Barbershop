@@ -18,7 +18,7 @@
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login-link">Вход</li>
+          <li><a class="login-link" href="login.html">Вход</a></li>
         </ul>
       </nav>
     </header>
@@ -102,8 +102,26 @@
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
       <p>Введите свой логин и пароль.</p>
-      <!-- form for login -->
-      <span class="modal-close">x</span>
+      <form class="login-form" action="/login" method="POST" >
+        <p>
+          <label for="user-login" class="visually-hidden">Логин</label>
+          <input class="login-icon-user" id="user-login" name="login" type="text" placeholder="Логин"> 
+        </p>
+        <p>
+          <label for="user-password"  class="visually-hidden">Пароль</label>
+          <input class="login-icon-password" id="user-password" name="password" type="password" placeholder="Пароль">
+        </p>
+        <p class="login-password-info">
+          <label class="login-checkbox">
+            <input type="checkbox" name="remember" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            Запомните меня
+          </label>
+          <a class="restore" href="forget-password.html">Я забыл пароль!</a>
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>

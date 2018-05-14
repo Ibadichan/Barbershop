@@ -18,7 +18,7 @@
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login-link">Вход</li>
+          <li><a class="login-link" href="login.html">Вход</a></li>
         </ul>
       </nav>
     </header>
@@ -72,8 +72,8 @@
         <figure class="gallery-content">
           <a href="#"><img src="img/studio.png" width="286" height="164" alt="Интерьер"></a>
         </figure>
-        <span class="button gallery-button gallery-button-back">Назад</span>
-        <span class="button gallery-button gallery-button-next">Вперед</span>
+        <button class="button gallery-button gallery-button-back" type="button">Назад</button>
+        <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
       </section>
 
       <section class="contacts">
@@ -99,7 +99,25 @@
         <p class="appointment-info">
           Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
         </p>
-        <!-- form for appointment -->
+        <form class="appointment-form" action="/appointment" method="POST">
+          <p class="appointment-item">
+            <label for="appointment-date">Дата</label>
+            <input id="appointment-date" name="date" type="text" placeholder="2017-10-08">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-time">Время</label>
+            <input id="appointment-time" name="time" type="text" placeholder="10:00">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-name">Ваше имя</label>
+            <input id="appointment-name" name="name" type="text" placeholder="Борода">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-phone">Телефон</label>
+            <input id="appointment-phone" name="phone" type="tel" placeholder="+7 123 456-78-90">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
       </section>
     </main>
 
@@ -129,13 +147,37 @@
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
       <p>Введите свой логин и пароль.</p>
-      <!-- form for login -->
-      <span class="modal-close">x</span>
+      <form class="login-form" action="/login" method="POST" >
+        <p>
+          <label for="user-login" class="visually-hidden">Логин</label>
+          <input class="login-icon-user" id="user-login" name="login" type="text" placeholder="Логин"> 
+        </p>
+        <p>
+          <label for="user-password"  class="visually-hidden">Пароль</label>
+          <input class="login-icon-password" id="user-password" name="password" type="password" placeholder="Пароль">
+        </p>
+        <p class="login-password-info">
+          <label class="login-checkbox">
+            <input type="checkbox" name="remember" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            Запомните меня
+          </label>
+          <a class="restore" href="forget-password.html">Я забыл пароль!</a>
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
+      <div id="map" style="height: 400px; background: url('img/map.png') no-repeat 50% 50% grey;">
+      </div>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
+
+    <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBtUzMHTT-hay1D1I6prKCus8IEDdQyNI&callback=initMap">
+    </script>
   </body>
 </html>
