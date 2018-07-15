@@ -4,7 +4,7 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17, center: petersburg
   });
-  var marker = new google.maps.Marker({ 
+  var marker = new google.maps.Marker({
     position: petersburg, map: map
   });
   var infowindow = new google.maps.InfoWindow({
@@ -14,5 +14,5 @@ function initMap() {
   infowindow.open(map, marker);
   marker.addListener('click', function() {
     infowindow.open(map, marker);
-  });
+  }, { passive: true });
 }
