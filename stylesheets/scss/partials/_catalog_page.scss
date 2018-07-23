@@ -1,0 +1,88 @@
+.filters {
+  fieldset {
+    border: none;
+  }
+
+  legend {
+    @include calculate_font(24px, 30px);
+  }
+
+  ul {
+    list-style: none;
+    line-height: 18px;
+  }
+}
+
+.filter-input {
+  &:hover + label,
+  &:focus + label {
+    color: $on_cursor;
+  }
+
+  &:disabled + label {
+    color: $disabled;
+  }
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item {
+  background-color: $catalog_item_background;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  a:first-child {
+    color: $black;
+  }
+
+  h3 {
+    @include calculate_font(14px, 18px);
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.catalog-category {
+  text-transform: none;
+}
+
+.catalog-item-price {
+  b {
+    @include calculate_font(14px, 20px);
+    text-align: center;
+    vertical-align: middle;
+
+    background-color: $price_background;
+  }
+
+  .button {
+    line-height: 20px;
+  }
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item {
+  a {
+    color: $white;
+    vertical-align: middle;
+    text-align: center;
+    background-color: $black;
+  }
+
+  &.pagination-item-current a {
+    color: $black;
+    background-color: $white;
+  }
+}
+
+.pagination-item:not(.pagination-item-current) a:hover,
+.pagination-item:not(.pagination-item-current) a:focus,
+.pagination-item:not(.pagination-item-current) a:active {
+  background-color: $on_cursor;
+}

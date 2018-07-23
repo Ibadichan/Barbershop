@@ -1,0 +1,36 @@
+.main-footer {
+  color: $white;
+  background: $footer_background url('../img/footer-background.png') 0 0 repeat;
+}
+
+.footer-contacts a {
+  color: $white;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.footer-social {
+  text-align: center;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.social-button {
+  color: $white;
+}
+
+.footer-copyright {
+  text-align: center;
+
+  a:hover,
+  a:focus {
+    color: $black;
+    background-color: $white;
+  }
+}

@@ -1,0 +1,38 @@
+@import "shared/storage";
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font: 700 14px/24px 'PT Sans Narrow', Arial, sans-serif;
+  color: $white;
+  text-transform: uppercase;
+
+  background: $black url('../img/hair-salon.jpg') top center no-repeat;
+
+  &.inner-page {
+    color: $black;
+    background: $content_background url('../img/content-background.png') 0 0 repeat;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font: inherit;
+  color: $white;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: $black;
+  border: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $on_cursor;
+  }
+}

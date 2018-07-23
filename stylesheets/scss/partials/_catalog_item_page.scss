@@ -1,0 +1,30 @@
+.product-photo-preview {
+  list-style: none;
+}
+
+.product-photo-full,
+.product-photo-preview li {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-article {
+  text-align: right;
+  color: $disabled;
+}
+
+.product-price b {
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: $price_background;
+}
+
+.product-info {
+  h3 {
+    @include calculate_font(24px, 30px);
+  }
+
+  ul {
+    list-style: none;
+  }
+}

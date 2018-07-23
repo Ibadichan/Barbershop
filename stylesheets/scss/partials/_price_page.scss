@@ -1,0 +1,29 @@
+.promo-title {
+  @include calculate_font(48px, 48px);
+  text-align: center;
+}
+
+.hair-products,
+.our-prices,
+.about-as {
+  h2 {
+    @include calculate_font(24px, 30px);
+  }
+}
+
+.hair-products ul {
+  list-style: none;
+}
+
+.our-prices {
+  table {
+    border-collapse: collapse;
+  }
+
+  td {
+    border: 2px solid $black;
+    &:nth-child(even) {
+      text-align: center;
+    }
+  }
+}

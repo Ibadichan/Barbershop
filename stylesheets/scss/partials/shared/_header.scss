@@ -1,0 +1,19 @@
+.main-navigation {
+  @include calculate_font(16px, 20px, $white);
+
+  background-color: $black;
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+
+  a {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $header_on_cursor;
+    }
+  }
+}

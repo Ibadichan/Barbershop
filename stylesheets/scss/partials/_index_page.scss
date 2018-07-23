@@ -1,0 +1,44 @@
+.index-columns {
+  color: $black;
+  background: $content_background url('../img/content-background.png') 0 0 repeat;
+
+  h2 {
+    @include calculate_font(30px, 42px);
+  }
+}
+
+.features-list {
+  list-style: none;
+}
+
+.feature-item {
+  text-align: center;
+
+  h3 {
+    @include calculate_font(30px, 42px);
+  }
+}
+
+.news-list {
+  list-style: none;
+}
+
+.news-item time {
+  text-transform: none;
+}
+
+.gallery-content {
+  border: 7px solid $white;
+  background-color: $gallery_background;
+}
+
+.appointment-item input {
+  font: inherit;
+
+  border: 2px solid $black;
+  background-color: transparent;
+
+  &:hover, &:focus {
+    border-color: $on_cursor;
+  }
+}

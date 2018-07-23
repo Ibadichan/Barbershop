@@ -1,0 +1,20 @@
+.page-title {
+  @include calculate_font(30px, 42px);
+}
+
+.breadcrumbs {
+  list-style: none;
+
+  a {
+    color: $black;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .breadcrumbs-current {
+    color: $disabled;
+  }
+}
