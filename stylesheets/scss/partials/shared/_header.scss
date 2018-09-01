@@ -1,11 +1,30 @@
+.main-header {
+  margin-bottom: 75px;
+}
+
 .main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @include calculate_font(16px, 20px, $white);
 
-  background-color: $black;
+  &-wrapper {
+    margin-bottom: 60px;
+    width: 100%;
+    background-color: $black;
+  }
+}
+
+.main-navigation-wrapper .container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .site-navigation,
 .user-navigation {
+  margin: 0;
+  padding: 0;
   list-style: none;
 
   a {
@@ -16,4 +35,18 @@
       background-color: $header_on_cursor;
     }
   }
+}
+
+.user-navigation {
+  width: 140px;
+}
+
+.site-navigation {
+  width: 540px;
+}
+
+.main-header-logo {
+  order: 2;
+  width: 368px;
+  height: 153px;
 }

@@ -1,17 +1,38 @@
 .index-columns {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px;
+
   color: $black;
   background: $content_background url('../img/content-background.png') 0 0 repeat;
 
   h2 {
     @include calculate_font(30px, 42px);
   }
+
+  &:first-of-type {
+    margin-bottom: 35px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 65px;
+  }
+}
+
+.features {
+  margin-bottom: 80px;
 }
 
 .features-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .feature-item {
+  width: 300px;
   text-align: center;
 
   h3 {
@@ -19,17 +40,33 @@
   }
 }
 
-.news-list {
-  list-style: none;
+.news {
+  width: 380px;
+
+  .news-list {
+    list-style: none;
+  }
 }
 
 .news-item time {
   text-transform: none;
 }
 
-.gallery-content {
-  border: 7px solid $white;
-  background-color: $gallery_background;
+.gallery {
+  width: 300px;
+
+  .gallery-content {
+    border: 7px solid $white;
+    background-color: $gallery_background;
+  }
+}
+
+.contacts {
+  width: 380px;
+}
+
+.appointment {
+  width: 300px;
 }
 
 .appointment-item input {

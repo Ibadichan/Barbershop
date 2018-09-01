@@ -1,19 +1,33 @@
 .main-footer {
+  padding-bottom: 40px;
+  padding-top: 60px;
+
   color: $white;
   background: $footer_background url('../img/footer-background.png') 0 0 repeat;
+
+  .container {
+    display: flex;
+  }
 }
 
-.footer-contacts a {
-  color: $white;
-  text-decoration: underline;
+.footer-contacts {
+  width: 320px;
+  margin: 0;
+  margin-right: 80px;
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
 
 .footer-social {
+  width: 140px;
   text-align: center;
 
   ul {
@@ -26,6 +40,9 @@
 }
 
 .footer-copyright {
+  width: 140px;
+  margin: 0;
+  margin-left: auto;
   text-align: center;
 
   a:hover,
