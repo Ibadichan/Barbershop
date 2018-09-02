@@ -1,8 +1,14 @@
 .page-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
   @include calculate_font(30px, 42px);
 }
 
 .breadcrumbs {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
   list-style: none;
 
   a {

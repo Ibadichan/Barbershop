@@ -2,6 +2,30 @@
   margin-bottom: 75px;
 }
 
+.inner-page {
+  .main-header {
+    margin-bottom: 50px;
+    background-color: $black;
+  }
+
+  .main-navigation {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .main-header-logo {
+    order: 0;
+
+    width: 111px;
+    height: 24px;
+    padding: 25px 20px;
+  }
+
+  .user-navigation {
+    margin-left: auto;
+  }
+}
+
 .main-navigation {
   display: flex;
   flex-direction: column;

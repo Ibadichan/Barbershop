@@ -1,6 +1,7 @@
 @import "shared/storage";
 
 body {
+  min-width: 960px;
   margin: 0;
   padding: 0;
 
@@ -40,5 +41,4 @@ a {
 .container {
   width: 940px;
   margin: 0 auto;
-  padding: 0 10px;
 }
