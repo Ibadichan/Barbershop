@@ -622,6 +622,9 @@ a {
 }
 
 .promo-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
   font-size: 48px;
   line-height: 48px;
   text-align: center;
@@ -629,15 +632,30 @@ a {
 
 .hair-products h2,
 .our-prices h2,
-.about-as h2 {
+.about-us h2 {
   font-size: 24px;
   line-height: 30px;
 }
 
+.price-list-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+
+.hair-products {
+  width: 240px;
+}
 .hair-products ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.our-prices {
+  width: 460px;
+}
 .our-prices table {
   border-collapse: collapse;
 }
@@ -646,6 +664,19 @@ a {
 }
 .our-prices td:nth-child(even) {
   text-align: center;
+}
+
+.about-us {
+  width: 860px;
+}
+.about-us .about-us-text {
+  display: flex;
+  justify-content: space-between;
+}
+.about-us p {
+  width: 380px;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-columns {
@@ -779,7 +810,7 @@ a {
 }
 
 .product-info {
-  width: 400px;
+  width: 390px;
 }
 .product-info .product-article {
   text-align: right;

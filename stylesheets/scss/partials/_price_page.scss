@@ -1,21 +1,39 @@
 .promo-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
   @include calculate_font(48px, 48px);
   text-align: center;
 }
 
 .hair-products,
 .our-prices,
-.about-as {
+.about-us {
   h2 {
     @include calculate_font(24px, 30px);
   }
 }
 
-.hair-products ul {
-  list-style: none;
+.price-list-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+
+.hair-products {
+  width: 240px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 }
 
 .our-prices {
+  width: 460px;
+
   table {
     border-collapse: collapse;
   }
@@ -25,5 +43,20 @@
     &:nth-child(even) {
       text-align: center;
     }
+  }
+}
+
+.about-us {
+  width: 860px;
+
+  .about-us-text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    width: 380px;
+    margin: 0;
+    padding: 0;
   }
 }
