@@ -47,6 +47,8 @@
 
 .site-navigation,
 .user-navigation {
+  display: flex;
+  flex-flow: row wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -63,10 +65,38 @@
 
 .user-navigation {
   width: 140px;
+
+  .login-link {
+    position: relative;
+    display: block;
+    padding: 25px 20px 25px 55px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 25px;
+      width: 15px;
+      height: 15px;
+      background-image: url('../img/login.svg');
+      opacity: 0.3;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+      opacity: 1;
+    }
+  }
 }
 
 .site-navigation {
-  width: 540px;
+  width: 545px;
+
+  a {
+    display: block;
+    padding: 25px 20px;
+  }
 }
 
 .main-header-logo {

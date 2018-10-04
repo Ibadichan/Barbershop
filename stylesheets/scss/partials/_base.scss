@@ -21,7 +21,14 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .button {
+  display: inline-block;
+  padding: 10px 30px;
   font: inherit;
   color: $white;
   vertical-align: middle;
@@ -36,9 +43,32 @@ a {
   &:active {
     background-color: $on_cursor;
   }
+
+  &:disabled, &.disabled {
+    cursor: default;
+    background-color: $disabled;
+  }
 }
 
 .container {
   width: 940px;
   margin: 0 auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
