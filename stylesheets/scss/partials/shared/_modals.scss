@@ -167,7 +167,6 @@
 
   input[type="checkbox"]:focus + .checkbox-indicator {
     outline: $browser_outline auto 5px;
-    border-color: $on_cursor;
   }
 
   input[type="checkbox"]:checked + .checkbox-indicator::before,
