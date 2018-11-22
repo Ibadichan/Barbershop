@@ -16,3 +16,42 @@ function initMap() {
     infowindow.open(map, marker);
   }, { passive: true });
 }
+
+function modalConstructor(modal, openLink, cross, openClass) {
+  var self = this;
+  this.openClass = openClass;
+  this.modal = modal;
+
+  openLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    self.toggleModal();
+  });
+
+  cross.addEventListener('click', self.toggleModal.bind(self));
+}
+
+modalConstructor.prototype.toggleModal = function() {
+  var classList = this.modal.className.split(' ');
+  var index = classList.indexOf(this.openClass);
+
+  if (index != -1) {
+    classList.splice(index, 1);
+    this.modal.className = classList.join(' ');
+  } else {
+    this.modal.className += ' ' + this.openClass;
+  }
+}
+
+new modalConstructor(
+  document.querySelector('.modal-login'),
+  document.querySelector('.login-link'),
+  document.querySelector('.modal-login .modal-close'),
+  'modal-login-show'
+);
+
+new modalConstructor(
+  document.querySelector('.modal-map'),
+  document.querySelector('.map-link'),
+  document.querySelector('.modal-map .modal-close'),
+  'modal-map-show'
+);

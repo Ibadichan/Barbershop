@@ -89,7 +89,7 @@
         <p class="footer-contacts">
           Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-          <a href="map.html">Как нас найти?</a><br>
+          <a href="map.html" class="map-link">Как нас найти?</a><br>
           Телефон: +7 (812) 666-02-66
         </p>
 
@@ -161,13 +161,13 @@
 
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
+      <p class="login-info">Введите свой логин и пароль.</p>
       <form class="login-form" action="/login" method="POST" >
-        <p>
+        <p class="username-wrapper">
           <label for="user-login" class="visually-hidden">Логин</label>
           <input class="login-icon-user" id="user-login" name="login" type="text" placeholder="Логин">
         </p>
-        <p>
+        <p class="password-wrapper">
           <label for="user-password"  class="visually-hidden">Пароль</label>
           <input class="login-icon-password" id="user-password" name="password" type="password" placeholder="Пароль">
         </p>
@@ -181,13 +181,17 @@
         </p>
         <button class="button" type="submit">Войти</button>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <div id="map" class="google-map"></div>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
 
     <script src="js/script.js"></script>

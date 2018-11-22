@@ -1,45 +1,201 @@
 .modal {
-  display: none;
+  position: fixed;
+  visibility: hidden;
   color: $black;
   background: $content_background url('../img/content-background.png') 0 0 repeat;
 
   h2 {
+    margin: 0;
+    margin-bottom: 18px;
     @include calculate_font(30px, 42px);
   }
 }
 
-.login-form input {
-  &[type="text"],
-  &[type="password"] {
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: -15px;
+
+  padding: 0;
+  width: 20px;
+  height: 20px;
+
+  border: 0;
+  background-color: transparent;
+  transform: translateX(100%);
+  cursor: pointer;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: $cross;
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+
+  &::after {
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+.modal-login {
+  top: 0;
+  left: 50%;
+  padding: 50px 80px 60px;
+  width: 300px;
+  transform: translate(-50%, -100%);
+  transition: all 0.5s;
+  box-shadow: 0px 30px 50px rgba(0, 1, 1, 0.75);
+
+  .login-info {
+    margin: 0;
+    margin-bottom: 14px;
+  }
+
+  &-show {
+    top: 120px;
+    visibility: visible;
+    transform: translateX(-50%);
+  }
+}
+
+.login-form {
+  p {
+    margin: 0;
+  }
+
+  .username-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .password-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .login-password-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 35px 10px 15px;
+
     font: inherit;
     text-transform: uppercase;
 
     border: 2px solid $black;
-    background-color: transparent;
+
+    &:hover, &:focus {
+      border-color: $on_cursor;
+    }
   }
 
-  &:hover, &:focus {
-    border: 2px solid $on_cursor;
+  .login-icon-user {
+    background: $content_background url('../img/user.svg') right 13px center no-repeat;
+  }
+
+  .login-icon-password {
+    background: $content_background url('../img/lock.svg') right 15px center no-repeat;
+  }
+
+  .restore {
+    color: $black;
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+
+  .login-checkbox {
+    position: relative;
+    padding-left: 32px;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      color: $on_cursor;
+    }
   }
 }
 
-.login-form .restore {
-  color: $black;
-  text-decoration: underline;
+.login-checkbox {
+  .checkbox-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  &:hover, &:focus {
-    text-decoration: none;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid $black;
+
+    &::before, &::after {
+      content: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2px;
+      height: 12px;
+      background-color: $black;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  input[type="checkbox"]:focus + .checkbox-indicator {
+    outline: $browser_outline auto 5px;
+    border-color: $on_cursor;
+  }
+
+  input[type="checkbox"]:checked + .checkbox-indicator::before,
+  input[type="checkbox"]:checked + .checkbox-indicator::after, {
+    content: '';
   }
 }
 
-.login-checkbox:hover,
-.login-checkbox:focus {
-  color: $on_cursor;
-}
-
-.modal-map .google-map {
-  height: 400px;
-
+.modal-map {
+  top: 0;
+  left: 50%;
+  width: 767px;
+  height: 560px;
   border: 7px solid $white;
+
   background: $map_background url('../img/map.png') 50% 50% no-repeat;
+  transform: translate(-50%, -100%);
+  transition: all 0.5s;
+
+  &-show {
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%, -50%);
+  }
+
+  .google-map {
+    width: 100%;
+    height: 100%;
+    text-transform: none;
+  }
 }
