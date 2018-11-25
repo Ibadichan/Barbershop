@@ -8,23 +8,25 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0;
   margin-bottom: 50px;
+  padding: 0;
   list-style: none;
 
   li:not(.breadcrumbs-current) {
+    $padding-right: 45px;
+
     position: relative;
-    padding-right: 45px;
+    padding-right: $padding-right;
 
     &::after {
       content: '';
       position: absolute;
       top: 50%;
-      right: 15px;
+      right: $padding-right / 2;
       width: 8px;
       height: 8px;
-      transform: translate(-50%, -50%) rotate(45deg);
       background-color: $black;
+      transform: translate(50%, -50%) rotate(45deg);
     }
   }
 

@@ -1,6 +1,6 @@
 .main-footer {
-  padding-bottom: 40px;
   padding-top: 60px;
+  padding-bottom: 40px;
 
   color: $white;
   background: $footer_background url('../img/footer-background.png') 0 0 repeat;
@@ -54,7 +54,9 @@
     transform: translate(-50%, -50%);
   }
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     background-color: $white;
 
     path {

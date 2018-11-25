@@ -1,0 +1,33 @@
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination-item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  a {
+    display: block;
+    padding: 10px 20px;
+    color: $white;
+    background-color: $black;
+  }
+
+  &-current a {
+    color: $black;
+    background-color: $white;
+  }
+}
+
+.pagination-item:not(.pagination-item-current) a:hover,
+.pagination-item:not(.pagination-item-current) a:focus,
+.pagination-item:not(.pagination-item-current) a:active {
+  background-color: $on_cursor;
+}

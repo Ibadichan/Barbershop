@@ -1,0 +1,25 @@
+.product-photos {
+  width: 460px;
+
+  .product-photo-full {
+    width: 460px;
+    height: 498px;
+    margin: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px $product_photos_shadow;
+  }
+
+  .product-photo-preview {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.product-photo-preview li {
+  width: 140px;
+  height: 149px;
+  box-shadow: 0 0 15px $product_photos_shadow;
+}

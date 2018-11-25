@@ -1,0 +1,23 @@
+.modal-map {
+  top: 0;
+  left: 50%;
+  width: 766px;
+  height: 560px;
+  border: 7px solid $white;
+
+  background: $map_background url('../img/map.png') 50% 50% no-repeat;
+  transform: translate(-50%, -100%);
+  transition: all 0.5s;
+
+  &-show {
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%, -50%);
+  }
+
+  .google-map {
+    width: 100%;
+    height: 100%;
+    text-transform: none;
+  }
+}

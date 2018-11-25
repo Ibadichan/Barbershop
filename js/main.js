@@ -1,3 +1,4 @@
+// map ->
 function initMap() {
   var petersburg = { lat: 59.938794, lng: 30.323083 };
 
@@ -17,6 +18,7 @@ function initMap() {
   }, { passive: true });
 }
 
+// modals ->
 function modalConstructor(modal, openLink, cross, openClass) {
   var self = this;
   this.openClass = openClass;

@@ -1,0 +1,14 @@
+.about-us {
+  width: 860px;
+
+  .about-us-text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    width: 385px;
+    margin: 0;
+    padding: 0;
+  }
+}

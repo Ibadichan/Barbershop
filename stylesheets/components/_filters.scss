@@ -1,0 +1,79 @@
+.filters {
+  width: 180px;
+
+  fieldset {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    border: none;
+  }
+
+  legend {
+    margin-bottom: 27px;
+    @include calculate_font(24px, 30px);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 18px;
+  }
+}
+
+.filter-option:not(:last-child) {
+  margin-bottom: 17px;
+}
+
+.filter-input {
+  & + label {
+    position: relative;
+    display: block;
+    padding-left: 43px;
+    padding-top: 2px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  & + label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid $black;
+  }
+
+  &:hover + label,
+  &:focus + label {
+    color: $on_cursor;
+  }
+
+  &:focus + label::before {
+    outline: $browser_outline auto 5px;
+  }
+
+  &:disabled + label {
+    color: $black;
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.filter-input-checkbox:checked + label::before {
+  background: transparent url('../img/cross.svg') 50% 50% no-repeat;
+}
+
+.filter-input-radio {
+  & + label::before {
+    border-radius: 50%;
+  }
+
+  &:checked + label::before {
+    box-shadow: inset 0 0 0 4px $content_background;
+    background-color: $black;
+  }
+}

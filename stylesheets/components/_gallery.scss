@@ -1,0 +1,31 @@
+.gallery {
+  position: relative;
+  width: 300px;
+
+  .gallery-content {
+    margin: 0;
+    height: 164px;
+    border: 7px solid $white;
+    background-color: $gallery_background;
+  }
+
+  .gallery-button {
+    position: absolute;
+    bottom: 0;
+    width: 140px;
+  }
+
+  .gallery-button-back {
+    left: 0;
+  }
+
+  .gallery-button-next {
+    right: 0;
+  }
+}
+
+.gallery-content a {
+  display: block;
+  width: 286px;
+  height: 164px;
+}
