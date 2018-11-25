@@ -1,0 +1,21 @@
+.product-price {
+  display: flex;
+  margin: 0;
+
+  b {
+    width: 110px;
+    padding: 10px;
+    text-align: center;
+
+    background-color: $price_background;
+  }
+}
+
+.product-info .product-price {
+  margin-bottom: 65px;
+}
+
+.catalog-item .product-price {
+  margin: 0 15px 15px;
+  line-height: 18px;
+}

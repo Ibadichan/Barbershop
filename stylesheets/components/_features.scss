@@ -1,0 +1,38 @@
+.features {
+  margin-bottom: 80px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-item {
+  width: 300px;
+  text-align: center;
+
+  h3 {
+    position: relative;
+    margin: 0;
+    margin-bottom: 60px;
+    @include calculate_font(30px, 42px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -30px;
+      width: 20px;
+      height: 20px;
+      background-color: $white;
+      transform: translateX(-50%) rotate(45deg);
+    }
+  }
+
+  p {
+    margin: 0 10px;
+  }
+}

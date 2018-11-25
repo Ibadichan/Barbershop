@@ -1,0 +1,36 @@
+@import 'utilities/mixins';
+@import 'utilities/variables';
+
+@import 'vendors/normalize';
+
+@import 'base/base';
+@import 'base/helpers';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grids';
+
+@import 'components/button';
+@import 'components/breadcrumbs';
+@import 'components/modals/all';
+
+@import 'components/features';
+@import 'components/news';
+@import 'components/gallery';
+@import 'components/contacts';
+@import 'components/appointment_form';
+
+@import 'components/filters';
+@import 'components/catalog';
+@import 'components/pagination';
+
+@import 'components/product/photos';
+@import 'components/product/info';
+@import 'components/product/price';
+
+@import 'components/promo_title';
+@import 'components/hair_products';
+@import 'components/prices_table';
+@import 'components/about_us';
+
+@import 'pages/inner';

@@ -1,0 +1,55 @@
+// index page
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px;
+
+  color: $black;
+  background:
+    url('../img/separator.png') 50% 50% no-repeat,
+    url('../img/content-background.png') 0 0 repeat;
+  background-color: $content_background;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 20px;
+
+    @include calculate_font(30px, 42px);
+  }
+
+  &:first-of-type {
+    margin-bottom: 35px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 65px;
+  }
+}
+
+// catalog page
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+// catalog item page
+.catalog-item-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+// price list page
+.price-list-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 75px;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 25px;
+    @include calculate_font(24px, 30px);
+  }
+}

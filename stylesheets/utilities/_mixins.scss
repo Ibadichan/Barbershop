@@ -1,0 +1,5 @@
+@mixin calculate_font($font_size, $line_height, $color: false) {
+  font-size: $font_size;
+  line-height: $line_height;
+  @if $color { color: $color }
+}

@@ -1,0 +1,41 @@
+.modal {
+  position: fixed;
+  visibility: hidden;
+  color: $black;
+  background: $content_background url('../img/content-background.png') 0 0 repeat;
+  box-shadow: 0px 30px 50px $modal_shadow;
+
+  &-close {
+    position: absolute;
+    top: 0;
+    right: -15px;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+
+    border: 0;
+    background-color: transparent;
+    transform: translateX(100%);
+    cursor: pointer;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 4px;
+      height: 20px;
+      border-radius: 2px;
+      background-color: $cross;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}

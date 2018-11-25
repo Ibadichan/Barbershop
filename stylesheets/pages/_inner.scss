@@ -1,0 +1,25 @@
+.inner-page {
+  color: $black;
+  background: $content_background url('../img/content-background.png') 0 0 repeat;
+
+  .main-header {
+    margin-bottom: 50px;
+    background-color: $black;
+  }
+
+  .main-navigation {
+    flex-direction: row;
+  }
+
+  .main-header-logo {
+    order: 0;
+
+    width: 111px;
+    height: 24px;
+    padding: 23px 20px;
+  }
+
+  .user-navigation {
+    margin-left: auto;
+  }
+}

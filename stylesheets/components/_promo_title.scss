@@ -1,0 +1,26 @@
+.promo-title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0 160px;
+  @include calculate_font(48px, 48px);
+  text-align: center;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 160px;
+    height: 2px;
+    background-color: $black;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}

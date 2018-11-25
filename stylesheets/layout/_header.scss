@@ -1,29 +1,5 @@
 .main-header {
-  margin-bottom: 75px;
-}
-
-.inner-page {
-  .main-header {
-    margin-bottom: 50px;
-    background-color: $black;
-  }
-
-  .main-navigation {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .main-header-logo {
-    order: 0;
-
-    width: 111px;
-    height: 24px;
-    padding: 23px 20px;
-  }
-
-  .user-navigation {
-    margin-left: auto;
-  }
+  margin-bottom: 70px;
 }
 
 .main-navigation {
@@ -34,8 +10,8 @@
   @include calculate_font(16px, 20px, $white);
 
   &-wrapper {
-    margin-bottom: 60px;
     width: 100%;
+    margin-bottom: 60px;
     background-color: $black;
   }
 }
@@ -58,13 +34,13 @@
 
     &:hover,
     &:focus {
-      background-color: $header_on_cursor;
+      background-color: $navigation_on_cursor;
     }
   }
 }
 
 .user-navigation {
-  width: 140px;
+  width: 110px;
 
   .login-link {
     position: relative;
@@ -75,16 +51,15 @@
       content: '';
       position: absolute;
       top: 27px;
-      left: 25px;
-      width: 15px;
-      height: 15px;
-      background-image: url('../img/login.svg');
+      left: 24px;
+      width: 14px;
+      height: 14px;
+      background: transparent url('../img/login.svg') center no-repeat;
       opacity: 0.3;
     }
 
     &:hover::before,
-    &:focus::before,
-    &:active::before {
+    &:focus::before {
       opacity: 1;
     }
   }
