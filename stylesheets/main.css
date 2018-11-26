@@ -649,6 +649,17 @@ input[type=radio].visually-hidden {
   color: black;
   background: #f8f5f2 url("../img/content-background.png") 0 0 repeat;
   box-shadow: 0px 30px 50px rgba(0, 1, 1, 0.75);
+  z-index: 2;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-close {
   position: absolute;

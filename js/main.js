@@ -19,17 +19,19 @@ function initMap() {
 }
 
 // modals ->
-function modalConstructor(modal, openLink, cross, openClass) {
+function modalConstructor(modal, openLink, cross, overlay, openClass) {
   var self = this;
   this.openClass = openClass;
   this.modal = modal;
+  this.overlay = overlay;
 
   openLink.addEventListener('click', function(event) {
     event.preventDefault();
     self.toggleModal();
   });
 
-  cross.addEventListener('click', self.toggleModal.bind(self));
+  overlay.addEventListener('click', this.toggleModal.bind(this));
+  cross.addEventListener('click', this.toggleModal.bind(this));
 }
 
 modalConstructor.prototype.toggleModal = function() {
@@ -39,8 +41,10 @@ modalConstructor.prototype.toggleModal = function() {
   if (index != -1) {
     classList.splice(index, 1);
     this.modal.className = classList.join(' ');
+    this.overlay.style.display = 'none';
   } else {
     this.modal.className += ' ' + this.openClass;
+    this.overlay.style.display = 'block';
   }
 }
 
@@ -48,6 +52,7 @@ new modalConstructor(
   document.querySelector('.modal-login'),
   document.querySelector('.login-link'),
   document.querySelector('.modal-login .modal-close'),
+  document.querySelector('.modal-login + .modal-overlay'),
   'modal-login-show'
 );
 
@@ -55,5 +60,6 @@ new modalConstructor(
   document.querySelector('.modal-map'),
   document.querySelector('.map-link'),
   document.querySelector('.modal-map .modal-close'),
+  document.querySelector('.modal-map + .modal-overlay'),
   'modal-map-show'
 );
