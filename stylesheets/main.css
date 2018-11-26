@@ -795,7 +795,7 @@ input[type=radio].visually-hidden {
   width: 766px;
   height: 560px;
   border: 7px solid white;
-  background: #aba9a7 url("../img/map.png") 50% 50% no-repeat;
+  background: #aba9a7 url("../img/map.jpg") 50% 50% no-repeat;
   transform: translate(-50%, -100%);
   transition: all 0.5s;
 }
