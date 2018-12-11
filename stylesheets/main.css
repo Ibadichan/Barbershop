@@ -645,7 +645,7 @@ input[type=radio].visually-hidden {
 
 .modal {
   position: fixed;
-  visibility: hidden;
+  display: none;
   color: black;
   background: #f8f5f2 url("../img/content-background.png") 0 0 repeat;
   box-shadow: 0px 30px 50px rgba(0, 1, 1, 0.75);
@@ -660,6 +660,9 @@ input[type=radio].visually-hidden {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-overlay-show {
+  display: block;
 }
 .modal-close {
   position: absolute;
@@ -690,18 +693,31 @@ input[type=radio].visually-hidden {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+  70% {
+    transform: translate(-50%, 30px);
+  }
+  90% {
+    transform: translate(-50%, -10px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
 .modal-login {
-  top: 0;
+  top: 120px;
   left: 50%;
   padding: 50px 80px 60px;
   width: 300px;
-  transform: translate(-50%, -100%);
-  transition: all 0.5s;
+  transform: translateX(-50%);
 }
 .modal-login-show {
-  top: 120px;
-  visibility: visible;
-  transform: translateX(-50%);
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
 }
 .modal-login h2 {
   margin: 0;
@@ -801,19 +817,18 @@ input[type=radio].visually-hidden {
 }
 
 .modal-map {
-  top: 0;
+  top: 120px;
   left: 50%;
   width: 766px;
   height: 560px;
   border: 7px solid white;
   background: #aba9a7 url("../img/map.jpg") 50% 50% no-repeat;
-  transform: translate(-50%, -100%);
-  transition: all 0.5s;
+  transform: translateX(-50%);
 }
 .modal-map-show {
-  top: 50%;
-  visibility: visible;
-  transform: translate(-50%, -50%);
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
 }
 .modal-map .google-map {
   width: 100%;

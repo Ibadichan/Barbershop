@@ -1,15 +1,14 @@
 .modal-login {
-  top: 0;
+  top: 120px;
   left: 50%;
   padding: 50px 80px 60px;
   width: 300px;
-  transform: translate(-50%, -100%);
-  transition: all 0.5s;
+  transform: translateX(-50%);
 
   &-show {
-    top: 120px;
-    visibility: visible;
-    transform: translateX(-50%);
+    display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
   }
 
   h2 {

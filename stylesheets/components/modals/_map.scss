@@ -1,18 +1,17 @@
 .modal-map {
-  top: 0;
+  top: 120px;
   left: 50%;
   width: 766px;
   height: 560px;
   border: 7px solid $white;
 
   background: $map_background url('../img/map.jpg') 50% 50% no-repeat;
-  transform: translate(-50%, -100%);
-  transition: all 0.5s;
+  transform: translateX(-50%);
 
   &-show {
-    top: 50%;
-    visibility: visible;
-    transform: translate(-50%, -50%);
+    display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
   }
 
   .google-map {

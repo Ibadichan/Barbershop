@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  visibility: hidden;
+  display: none;
   color: $black;
   background: $content_background url('../img/content-background.png') 0 0 repeat;
   box-shadow: 0px 30px 50px $modal_shadow;
@@ -15,6 +15,10 @@
     height: 100%;
     width: 100%;
     background-color: $disabled;
+  }
+
+  &-overlay-show {
+    display: block;
   }
 
   &-close {
@@ -50,4 +54,11 @@
       transform: translate(-50%, -50%) rotate(45deg);
     }
   }
+}
+
+@keyframes bounce {
+  0%   { transform: translate(-50%, -2000px); }
+  70%  { transform: translate(-50%, 30px);    }
+  90%  { transform: translate(-50%, -10px);   }
+  100% { transform: translate(-50%, 0);       }
 }
